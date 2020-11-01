@@ -25,7 +25,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Package
         run: |
-         zip --junk-paths IllScriptsConnector ./plugin/*
+         cd plugin
+         zip --junk-paths ../IllScriptsConnector.zip *
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
